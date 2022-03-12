@@ -125,18 +125,15 @@ include("partials/head.php");
 							<div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
 
 							<div class="slick3 gallery-lb">
-								<div class="item-slick3" data-thumb="<?php echo 'admin/' . $final['picture']; ?>">
-									<div class="wrap-pic-w pos-relative" style="height:600px ;">
-										<img src="<?php echo 'admin/' . $final['picture']; ?>">
-										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="<?php echo 'admin/' . $final['picture']; ?>">
+			<div class="item-slick3" 
+			data-thumb="<?php echo 'admin/' . $final['picture']; ?>">
+			<div class="wrap-pic-w pos-relative" style="height:600px ;">
+			<img src="<?php echo 'admin/' . $final['picture']; ?>">
+			<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="<?php echo 'admin/' . $final['picture']; ?>">
 											<i class="fa fa-expand"></i>
 										</a>
 									</div>
 								</div>
-
-
-
-
 							</div>
 						</div>
 					</div>

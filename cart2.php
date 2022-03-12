@@ -133,8 +133,9 @@ include("partials/head.php");
 									<th class="column-5">Update</th>
 								</tr>
 								<?php
+								$total = 0;
 								if (isset($_SESSION['cart'])) {
-									$total = 0;
+									
 									foreach ($_SESSION['cart'] as $key => $value) {
 										$total = $total + $value['item_price'] * $value['quantity'];
 								?>
@@ -228,10 +229,9 @@ include("partials/head.php");
 								<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="phone" placeholder="phone number">
 							</div>
 				<div class="rs1-select2 rs1-select2 bor8 bg0 m-b-12 m-t-9">
-					<select class="js-select2" name="time">
-						<option>Select a payment ...</option>
-						<option>Cash on delivery </option>
-						<option>paypal</option>
+					<select class="js-select2" name="payment">
+						<option value="cash">Cash on delivery </option>
+						<option value="paypal">paypal</option>
 					</select>
 					<div class="dropDownSelect2"></div>
 				</div> 

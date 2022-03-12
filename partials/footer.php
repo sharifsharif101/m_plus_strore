@@ -35,9 +35,7 @@
 					</ul>
 				</div>
 
-				<div class="col-sm-6 col-lg-3 p-b-50">
-
-				</div>
+		
 
 				<div class="col-sm-6 col-lg-3 p-b-50">
 					<h4 class="stext-301 cl0 p-b-30">
@@ -63,9 +61,7 @@
 					</div>
 				</div>
 
-				<div class="col-sm-6 col-lg-3 p-b-50">
 
-				</div>
 			</div>
 
 			<div class="p-t-40">

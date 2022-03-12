@@ -1,6 +1,5 @@
 <?php 
 	include("partials/connect.php");
-	
 ?>
 	
 	
@@ -16,9 +15,15 @@
 					</div>
 
 					<div class="right-top-bar flex-w h-full">
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							My Account
-						</a>
+
+						<?php 
+						if (!empty($_SESSION['email'])) { ?>
+							<a href="handler/customerlogout.php" class="flex-c-m trans-04 p-lr-25">Logout </a>
+							<?php }else{ ?>
+						<a href="customerforms.php" class="flex-c-m trans-04 p-lr-25">Login</a>
+
+						<?php } ?>
+						
 					</div>
 				</div>
 			</div>
@@ -51,13 +56,26 @@
 						</ul>
 					</div>	
 
+
+
+
 					<!-- Icon header -->
 					<div class="wrap-icon-header flex-w flex-r-m">
 						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
 							<i class="zmdi zmdi-search"></i>
 						</div>
 
-						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="2">
+						<?php 
+				
+				if (!empty($_SESSION['cart'])){
+					 $qty=count($_SESSION['cart']);
+					?>
+			<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" onclick="location.href='cart.php'" data-notify="<?php echo $qty ?>">
+				
+					<?php }else { ?>
+
+						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" onclick="location.href='cart.php'" data-notify="0">
+						<?php } ?>
 							<i class="zmdi zmdi-shopping-cart"></i>
 						</div>
 
@@ -82,7 +100,8 @@
 					<i class="zmdi zmdi-search"></i>
 				</div>
 
-				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="2">
+
+				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti " onclick="location.href='cart.php'"data-notify="2">
 					<i class="zmdi zmdi-shopping-cart"></i>
 				</div>
 
