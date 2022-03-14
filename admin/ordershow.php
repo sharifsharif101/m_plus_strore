@@ -4,7 +4,6 @@
 <?php 
     include ('adminpartials/session.php');
     include ('adminpartials/head.php');
-
 ?>
 
 
@@ -36,36 +35,49 @@ include ("adminpartials/aside.php");
       <!-- Small boxes (Stat box) -->
       <div class="row">
         <div class="col-sm-9">
-          <a href="product.php">
-            <button style="color: green;">Add products</button>
-            </a>
-            <hr>
-            <a href="categories.php">
-            <button style="color: green;">Add categories</button>
-            </a>
-            <hr>
+
+        <?php 
+      include ('../partials/connect.php');
+      $id=$_GET['pro_id'];
+      $sql = "SELECT * from orders where id='$id'";
+      $result= $connect->query($sql);
+      $final = $result->fetch_assoc(); ?>  
+      <h3> customerNo : <?php echo $final['customer_id']; ?> </h3> <hr> <br>
+      <h3> Total : <?php echo $final['total']; ?> </h3> <hr> <br>
+      <h3> Address : <?php echo $final['address']; ?> </h3> <hr> <br>
+
+
+
+ 
+
+
         </div>
+    
         <div class="col-sm-9">
-          <a href="product.php">
-            <button style="color: green;">Add products</button>
-            </a>
-            <hr>
-            <a href="orders.php">
-            <button style="color: green;">View Orders</button>
-            </a>
-            <hr>
+
+        <?php 
+      include ('../partials/connect.php');
+      $id=$_GET['pro_id'];
+      $sql = "SELECT * from order_details where id='$id'";
+      $result= $connect->query($sql);
+      $final = $result->fetch_assoc(); ?>  
+      <h3> ProductNo : <?php echo $final['product_id']; ?> </h3> <hr> <br>
+      <h3> Quantity : <?php echo $final['quantity']; ?> </h3> <hr> <br>
+
+
+
+ 
+
 
         </div>
+    
+        
 
-
-
-
-      
-    </section>
-
-
-
-  </div>
+        <div class="col-sm-3">
+        </div>
+ 
+   </section>
+   </div>
   <!-- /.content-wrapper -->
   <?php 
   include ("adminpartials/footer.php");

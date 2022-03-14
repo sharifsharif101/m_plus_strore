@@ -4,7 +4,6 @@
 <?php 
     include ('adminpartials/session.php');
     include ('adminpartials/head.php');
-
 ?>
 
 
@@ -35,37 +34,41 @@ include ("adminpartials/aside.php");
     <section class="content">
       <!-- Small boxes (Stat box) -->
       <div class="row">
+
         <div class="col-sm-9">
-          <a href="product.php">
-            <button style="color: green;">Add products</button>
-            </a>
-            <hr>
-            <a href="categories.php">
-            <button style="color: green;">Add categories</button>
-            </a>
-            <hr>
-        </div>
-        <div class="col-sm-9">
-          <a href="product.php">
-            <button style="color: green;">Add products</button>
-            </a>
-            <hr>
-            <a href="orders.php">
-            <button style="color: green;">View Orders</button>
-            </a>
-            <hr>
-
-        </div>
-
-
-
-
+        <?php 
       
-    </section>
+       include ('../partials/connect.php');
+
+       $sql = "SELECT *  FROM orders";
+       $result = $connect->query($sql);
+       while($final=$result->fetch_assoc()){ ?>
+
+      <a href="ordershow.php?pro_id= <?php echo $final['id'] ?>">
+      <h3> <?php echo $final['id'] ;?>: <?php echo $final['phone'] ; ?> <br>Total = <?php echo $final['total'] ; ?></h3>
+   
+       </a>
+      <a href="orderdelete.php?del_id=<?php echo $final['id']; ?>">
+        <button style="color: red;"> Delete </button>
+      </a> <hr> 
+
+
+      <?php } ?> 
 
 
 
-  </div>
+ 
+
+
+        </div>
+    
+        
+
+        <div class="col-sm-3">
+        </div>
+ 
+   </section>
+   </div>
   <!-- /.content-wrapper -->
   <?php 
   include ("adminpartials/footer.php");
