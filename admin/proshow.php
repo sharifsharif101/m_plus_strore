@@ -45,7 +45,7 @@ include ("adminpartials/aside.php");
       <h3> Name : <?php echo $final['name']; ?> </h3> <hr> <br>
       <h3> Price : <?php echo $final['price']; ?> </h3> <hr> <br>
       <h3> Description : <?php echo $final['description']; ?> </h3> <hr> <br>
-      <img src="<?php echo $final['picture'];  ?>" alt="no file "
+      <img src="<?php echo $final['picture'];  ?>"
       style="height: 300px; width:300px;"
       >
 

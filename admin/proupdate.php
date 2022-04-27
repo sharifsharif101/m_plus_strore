@@ -46,11 +46,6 @@ include ("adminpartials/aside.php");
           $sql ="SELECT * FROM products WHERE id='$newid' ";
           $result=$connect->query($sql);
           $final=$result->fetch_assoc();
-
-
-
-
-
           ?>
           <h1>Products</h1>
               <div class="box-body">
