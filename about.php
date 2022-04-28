@@ -25,36 +25,7 @@ include ("partials/header.php")
 	<!-- Content page -->
 	<section class="bg0 p-t-75 p-b-120">
 		<div class="container">
-			<div class="row p-b-148">
-				<div class="col-md-7 col-lg-8">
-					<div class="p-t-7 p-r-85 p-r-15-lg p-r-0-md">
-						<h3 class="mtext-111 cl2 p-b-16">
-							هدف المتجر
-						</h3>
-
-						<p class="stext-113 cl6 p-b-26">
-							 هذا المتجر الإلكتروني يسهل لك عملية الوصل
-							 شراء الموبايل الذي ترده
-						</p>
-
-						<p class="stext-113 cl6 p-b-26">
-							//////
-						</p>
-
-						<p class="stext-113 cl6 p-b-26">
-								//
-						</p>
-					</div>
-				</div>
-
-				<div class="col-11 col-md-5 col-lg-4 m-lr-auto">
-					<div class="how-bor1 ">
-						<div class="hov-img0">
-							<img src="images/about-01.jpg" alt="IMG">
-						</div>
-					</div>
-				</div>
-			</div>
+ 
 			
 			<div class="row">
 				<div class="order-md-2 col-md-7 col-lg-8 p-b-30">
@@ -64,7 +35,8 @@ include ("partials/header.php")
 						</h3>
 
 						<p class="stext-113 cl6 p-b-26">
-							Mauris non lacinia magna. Sed nec lobortis dolor. Vestibulum rhoncus dignissim risus, sed consectetur erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam maximus mauris sit amet odio convallis, in pharetra magna gravida. Praesent sed nunc fermentum mi molestie tempor. Morbi vitae viverra odio. Pellentesque ac velit egestas, luctus arcu non, laoreet mauris. Sed in ipsum tempor, consequat odio in, porttitor ante. Ut mauris ligula, volutpat in sodales in, porta non odio. Pellentesque tempor urna vitae mi vestibulum, nec venenatis nulla lobortis. Proin at gravida ante. Mauris auctor purus at lacus maximus euismod. Pellentesque vulputate massa ut nisl hendrerit, eget elementum libero iaculis.
+هدفنا في متجر التفاحة الإلكتورني جعل عملية التسوق من أجل شراء 
+اي من منتجاتك الإلكتورنية عملية سهلة وسريعة لا تتطلب الكثير من الوقت والجهد
 						</p>
 
 						<div class="bor16 p-l-29 p-b-9 m-t-22">
