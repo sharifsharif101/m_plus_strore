@@ -35,17 +35,16 @@ include ("partials/header.php")
 						</h3>
 
 						<p class="stext-113 cl6 p-b-26">
-هدفنا في متجر التفاحة الإلكتورني جعل عملية التسوق من أجل شراء 
-اي من منتجاتك الإلكتورنية عملية سهلة وسريعة لا تتطلب الكثير من الوقت والجهد
+						Our goal in the M+Store is to make the process of shopping in order to buy Any of your electronic products is an easy and quick process that does not require a lot of time and effort
 						</p>
 
 						<div class="bor16 p-l-29 p-b-9 m-t-22">
 							<p class="stext-114 cl6 p-r-40 p-b-11">
-								Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while.
+							“Ecommerce isn’t the cherry on the cake, it’s the new cake”
 							</p>
 
 							<span class="stext-111 cl8">
-								- Steve Job’s 
+								- Jean Paul Ago CEO L’Oreal
 							</span>
 						</div>
 					</div>
