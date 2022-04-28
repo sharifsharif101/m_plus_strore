@@ -11,7 +11,7 @@
 		<div class="top-bar">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
-						 Good Place To Shop For Your Next Mobile or any accories
+						 Good Place To Shop For Your Next Mobile or any accessories
 					</div>
 
 					<div class="right-top-bar flex-w h-full">
@@ -28,7 +28,7 @@
 				</div>
 			</div>
  
-			<div class="wrap-menu-desktop">
+			<div class="wrap-menu-desktop" style="background-color:white;" >
 				<nav class="limiter-menu-desktop container">
 					
 					<!-- Logo desktop -->		
