@@ -2,7 +2,7 @@
  $host = 'localhost';
  $user = 'root';
  $password = '';
- $dbname = "phpstore";
+ $dbname = "m+database";
 
  $connect = mysqli_connect( $host , $user, $password , $dbname );
  

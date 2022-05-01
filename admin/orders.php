@@ -45,7 +45,7 @@ include ("adminpartials/aside.php");
        while($final=$result->fetch_assoc()){ ?>
 
       <a href="ordershow.php?pro_id= <?php echo $final['id'] ?>">
-      <h3> <?php echo $final['id'] ;?>: <?php echo $final['phone'] ; ?> <br>Total = <?php echo $final['total'] ; ?></h3>
+      <h3> <?php echo  $final['id'] ;?>:<?php echo $final['phone'] ; ?><br>Total = <?php echo $final['total'] ; ?></h3>
    
        </a>
       <a href="orderdelete.php?del_id=<?php echo $final['id']; ?>">

@@ -55,12 +55,12 @@ include("partials/head.php");
                                     <td class="column-2"><?php echo $value['item_name'];  ?></td>
                                     <td class="column-3">$<?php echo $value['item_price'];  ?></td>
                                     <td class="column-4">
-                                        <form action="cartupdate.php" method="POST">
-                                            <div class="wrap-num-product flex-w m-l-auto m-r-0">
-                                                <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-                                                    <i class="fs-16 zmdi zmdi-minus"></i>
-                                                </div>
-                                                <input name="quantity" class="mtext-104 cl3 txt-center num-product"
+  <form action="cartupdate.php" method="POST">
+ <div class="wrap-num-product flex-w m-l-auto m-r-0">
+ <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+<i class="fs-16 zmdi zmdi-minus"></i>
+ </div>
+ <input name="quantity" class="mtext-104 cl3 txt-center num-product"
                                                     type="number" name="num-product1"
                                                     value="<?php echo $value['quantity'] ?>">
                                                 <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">

@@ -8,11 +8,15 @@ $phone=$_POST['phone'];
 $address=$_POST['address'];
 $payment=$_POST['payment'];
 
+ 
 
-$customerid=$_SESSION['customerid'];
+if(isset($_SESSION['customerid'])):  
+	$customerid=$_SESSION['customerid'];
 
 $sql = "INSERT INTO `orders`( `customer_id`, `address`, `phone`, `total`,`pay_method`) VALUES ('$customerid','$address','$phone','$total','$payment')";
 $connect->query($sql);
+
+endif; 
 
 $sql2="SELECT id FROM orders order by id DESC LIMIT 1";
 $result=$connect->query($sql2);
