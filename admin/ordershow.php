@@ -59,10 +59,12 @@ include('adminpartials/head.php');
         <div class="col-sm-9">
 
           <?php
+ include('../partials/connect.php');
  
-          $sql2="SELECT * from `order_details` WHERE id='$id'";
+ $sql2="SELECT  `product_id`, `quantity` FROM `order_details` WHERE id='$id'";
           $results=$connect->query($sql2);
           $final=$results->fetch_assoc(); 
+          print_r($final) ;
           ?>
           <h3> ProductNo : <?php echo $final['product_id']?> </h3><hr><br>
 
