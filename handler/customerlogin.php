@@ -1,5 +1,9 @@
 <?php 
 session_start();
+include ("../partials/head.php") ;
+
+error_reporting(0);
+ini_set('display_errors', 0);
 
 if (isset($_POST['login'])){
     include ('../partials/connect.php');
@@ -22,9 +26,57 @@ if (isset($_POST['login'])){
     if($email=$final['username'] AND $password=$final['password']){
         header('Location:../cart.php');
     }else{
-      echo "<script>alert('Credentials are Wrong');
-      window.location.href='../customerforms.php';</script>";
+      echo  '
+      <script type="text/javascript">
+
+$(document).ready(function(){
+
+  swal({
+    position: "top-end",
+    icon: "error",
+    title: "Credentials are Wrong",
+    showConfirmButton: false,
+    closeOnClickOutside: false,
+    closeOnEsc: false
+    
+  }).then(function() {
+    window.location = "../customerforms.php";
+});
+  
+});
+
+</script>
+ ';
+
     }
+
+    if (empty($_SESSION['email'] AND $_SESSION['password'])) {
+      echo '
+      
+ <script type="text/javascript">
+
+ $(document).ready(function(){
+ 
+   swal({
+     position: "top-end",
+     icon: "error",
+     title: "please Login ",
+     showConfirmButton: false,
+     closeOnClickOutside: false,
+     closeOnEsc: false
+     
+   }).then(function() {
+     window.location = "../customerforms.php";
+ });
+   
+ });
+ 
+ </script>
+      
+      ';
+    }
+    
+     
 
     
 
