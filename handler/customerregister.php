@@ -20,7 +20,7 @@ $(document).ready(function(){
 
   swal({
     position: "top-end",
-    icon: "warning",
+    icon: "error",
     title: "You are allredy Registered ",
     showConfirmButton: false,
     closeOnClickOutside: false,
@@ -55,12 +55,39 @@ if ($password==$password2) {
     </script>";
 
 }else{
-    echo "<script>alert('password DidNot Match');
-    window.location.href='../customerforms.php';
-    </script>";
+    echo '
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+    
+      swal({
+        position: "top-end",
+        icon: "error",
+        title: "password DidNot Match",
+        showConfirmButton: false,
+        closeOnClickOutside: false,
+        closeOnEsc: false,
+        showClass: {
+            popup: "animate__animated animate__fadeInDown"
+          },
+          hideClass: {
+            popup: "animate__animated animate__fadeOutUp"
+          }
+        
+      }).then(function() {
+        window.location = "../customerforms.php";
+    });
+      
+    });
+    
+    </script>
+     
+    ';
+    die;
 }
+
+
  
-include ("../partials/footer.php");
 
 
 
