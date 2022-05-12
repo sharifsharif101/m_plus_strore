@@ -43,8 +43,9 @@ include('adminpartials/head.php');
           $sql="SELECT * from orders WHERE id='$id'";
           $results=$connect->query($sql);
 
-          $final=$results->fetch_assoc();        
-          ?>
+          $final=$results->fetch_assoc(); 
+         
+           ?>
 
           <h3> CustomerNo : <?php echo $final['customer_id']?> </h3><hr><br>
 
@@ -59,19 +60,19 @@ include('adminpartials/head.php');
         <div class="col-sm-9">
 
           <?php
- include('../partials/connect.php');
+
+ $sql2="SELECT * FROM order_details WHERE order_id='$id'";
  
- $sql2="SELECT  `product_id`, `quantity` FROM `order_details` WHERE id='$id'";
           $results=$connect->query($sql2);
+ 
           $final=$results->fetch_assoc(); 
-          print_r($final) ;
+        
+
           ?>
           <h3> ProductNo : <?php echo $final['product_id']?> </h3><hr><br>
 
           <h3> quantity : <?php echo $final['quantity']?> </h3><hr><br>
-          
- 
-
+    
 
         </div>
 
@@ -89,3 +90,5 @@ include('adminpartials/head.php');
  ?>
 </body>
 </html>
+
+ 
