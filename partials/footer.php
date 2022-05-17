@@ -143,6 +143,9 @@
 	</script>
 <!--===============================================================================================-->
  
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-	<script src="js/main.js"></script>
+<script>
+	$().ready(function(){
+		$("#commentForm").validate();
+	})
+</script>  
+<script src="js/main.js"></script>

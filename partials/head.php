@@ -36,6 +36,8 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 
+<script src="validate.js"></script>
+
 
 <!--===============================================================================================-->
 </head>

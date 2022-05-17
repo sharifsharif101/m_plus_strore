@@ -10,8 +10,40 @@ $password=$_POST['password'];
 $password2=$_POST['password2'];
 // https://sweetalert2.github.io/
 $duplicate=mysqli_query($connect,"select * from `customers` where username='$email' ");
-if (mysqli_num_rows($duplicate)>0)
-{
+if (strlen($password) < 3) {
+  echo "Password too short!";
+  die;
+}
+if (!preg_match("#[0-9]+#", $password)) {
+  echo"Password must include at least one number!";
+  die;
+}
+if (!preg_match("#[a-zA-Z]+#", $password)) {
+ 
+  echo '<script type="text/javascript">
+
+  $(document).ready(function(){
+  
+    swal({
+      position: "top-end",
+      icon: "error",
+      title: "Password must include at least one letter!",
+      showConfirmButton: false,
+      closeOnClickOutside: false,
+      closeOnEsc: false,
+      
+    }).then(function() {
+      window.location = "../customerforms.php";
+  });
+    
+  });
+  
+  </script>';
+  die;
+}     
+
+
+if (mysqli_num_rows($duplicate)>0){
 echo '
  
 <script type="text/javascript">
@@ -44,6 +76,8 @@ $(document).ready(function(){
  
 
 }
+
+
 
 if ($password==$password2) {
     $sql="INSERT INTO `customers`(`username`, `password`) VALUES ('$email','$password')";
@@ -85,10 +119,3 @@ if ($password==$password2) {
     ';
     die;
 }
-
-
- 
-
-
-
-?>
