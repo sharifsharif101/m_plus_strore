@@ -6,7 +6,7 @@ if (isset ($_POST['update'])){
     $newid=$_POST['form_id'];
     $newname=$_POST['name'];
     $newprice=$_POST['price'];
-    $newdesc=$_POST['description'];
+    $newdesc='';
     $newcat=$_POST['category'];
 
     
@@ -16,8 +16,19 @@ if (isset ($_POST['update'])){
     $file_tmp=$_FILES['file']['tmp_name'];
     $file_store="uploads/".$file_name;
 
-    move_uploaded_file($file_tmp,$file_store);
+    
 
+if (isset($_FILES["file"]["tmp_name"]) && $_FILES["file"]["tmp_name"] != "") {
+    move_uploaded_file($file_tmp,$file_store);
+}else{
+// if image not upload this code will execute
+$file_path = $_POST['hiddenImage'];
+}
+
+ 
+
+
+    
     $sql =  "UPDATE products SET 
     name= '$newname',
     price= '$newprice',
@@ -33,10 +44,12 @@ if (isset ($_POST['update'])){
         header('Location:adminindex.php');
     }
 
+}
     
 
-}
+ 
 
 
 
 ?>
+<!-- --------------------------------------------------- -->

@@ -41,7 +41,7 @@ include ("adminpartials/aside.php");
           <?php  
 
           $newid=$_GET['up_id'];
-          echo  $newid;
+          // echo  $newid;
           include ('../partials/connect.php');
           $sql ="SELECT * FROM products WHERE id='$newid' ";
           $result=$connect->query($sql);
@@ -61,14 +61,22 @@ include ("adminpartials/aside.php");
                   value="<?php echo $final['price'] ?>"
                   name="price">
                 </div>
+                <?php $hiddenImage = $final['picture']; ?>
                 <div class="form-group">
                   <label for="picture">File input</label>
                   <input type="file" 
                   value="<?php echo $final['picture'] ?>"
-                  id="picture" name="file">
+                  id="picture" name="file"> 
+                   <input type='hidden' name='hiddenImage' value='<?php echo $hiddenImage ?>'> 
                 </div>
+                <?php $hiddendesc= $final['description']; ?>
                 <div class="form-group">
-                  <label for="description">Description</label>
+                  <label for="description">Desscription</label>
+
+                <textarea name="hiddenDesc" style="display:none;"
+                value="<?php echo $hiddendesc ?>"
+                ></textarea>
+
                 <textarea rows="10" placeholder="Enter Description" class="form-control" id="description" 
                 value="<?php echo $final['description'] ?>"
                 name="description"></textarea>

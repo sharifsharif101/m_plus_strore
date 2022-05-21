@@ -18,7 +18,13 @@
 
 						<?php 
 						if (!empty($_SESSION['email'])) { ?>
-							<a href="handler/customerlogout.php" class="flex-c-m trans-04 p-lr-25">Logout </a>
+						
+						<span class="flex-c-m trans-04 p-lr-25">welcome/  <?php echo $_SESSION['email']; ?></span>
+
+						<a href="handler/customerlogout.php" class="flex-c-m trans-04 p-lr-25">Logout </a>
+
+
+
 							<?php }else{ ?>
 						<a href="customerforms.php" class="flex-c-m trans-04 p-lr-25">Login</a>
 

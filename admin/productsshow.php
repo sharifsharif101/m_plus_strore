@@ -55,9 +55,10 @@ include ("adminpartials/aside.php");
         <button> Update </button>
       </a>
       
-      <a href="prodelete.php?del_id=<?php echo $final['id']; ?>">
+      <a href="prodelete.php?del_id=<?php echo $final['id']; ?>"onclick="return confirm('Are you sure you want to delete this item?');">
         <button style="color: red;"> Delete </button>
-      </a> <hr> 
+        
+      </a><hr> 
 
 
       <?php } ?> 

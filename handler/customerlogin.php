@@ -10,7 +10,7 @@ if (isset($_POST['login'])){
     $email=$_POST['email'];
     $password=$_POST['password'];
 
-    # the three step 1* the query 2*
+  
 
     $sql = "SELECT * FROM customers WHERE username='$email' AND 
     password='$password'";
@@ -50,7 +50,7 @@ $(document).ready(function(){
 
     }
 
-    if (empty($_SESSION['email'] AND $_SESSION['password'])) {
+if (empty($_SESSION['email'] AND $_SESSION['password'])) {
       echo '
       
  <script type="text/javascript">

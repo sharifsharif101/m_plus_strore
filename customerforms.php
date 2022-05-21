@@ -141,15 +141,20 @@ error_reporting(E_ALL ^ E_WARNING);
 						</h4>
 
 						<div class="bor8 m-b-20 how-pos4-parent">
-							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="email" id="cemail" name="email" placeholder="Your Email Address">
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="email" id="cemail" name="email" placeholder="Your Email Address" required>
 							<img class="how-pos4 pointer-none" src="images/icons/icon-email.png" alt="ICON">
+						</div>
+						<span style="font-size: 12px;
+    color: green;"> password must be more than <span>5</span> character</span>
+						<br>
+						<span style="font-size: 12px;
+    color: green;">password must be <span> number</span> and letter</span>
+						<div class="bor8 m-b-30">
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="password" name="password" placeholder="password" required>
 						</div>
 
 						<div class="bor8 m-b-30">
-							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="password" name="password" placeholder="password">
-						</div>
-						<div class="bor8 m-b-30">
-							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="password" name="password2" placeholder="password">
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="password" name="password2" placeholder="password" required>
 						</div>
 
 						<button  class=" flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer"  >
