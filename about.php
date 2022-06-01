@@ -2,11 +2,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include ("partials/head.php");?>
+<?php 
+session_start();
+include ("partials/head.php");?>
 
 <body class="animsition">
 	
 <?php 
+
 include ("partials/header.php") 
 
 

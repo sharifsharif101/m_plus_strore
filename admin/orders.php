@@ -14,8 +14,6 @@
 include("adminpartials/header.php");
 include ("adminpartials/aside.php");
 ?>
-  <!-- Left side column. contains the logo and sidebar -->
-
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -26,7 +24,7 @@ include ("adminpartials/aside.php");
         <small>Control panel</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
         <li class="active">Dashboard</li>
       </ol>
     </section>

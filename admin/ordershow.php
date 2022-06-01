@@ -48,9 +48,7 @@ include('adminpartials/head.php');
            ?>
 
           <h3> CustomerNo : <?php echo $final['customer_id']?> </h3><hr><br>
-
           <h3> Total : <?php echo $final['total'] . '$' ;?> </h3><hr><br>
-
           <h3> Address : <?php echo $final['address']?> </h3><hr><br>
           
 
